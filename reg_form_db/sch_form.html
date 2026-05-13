@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>School Registration Form</title>
+</head>
+<body>
+    <form action="sch_submit.php" method="post" class="flex items-center justify-center mt-30">
+    <div class="max-w-md mx-auto bg-gray-900 px-8 py-9 rounded-2xl space-y-5">
+        <div>
+            <label for="student_id" class="text-white">
+                Student_id
+            </label>
+            <input type="text" placeholder="e.g kel0056" name="Student_id"  class="w-full px-4 py-1.5 rounded-lg bg-gray-800 text-white outline-none border border-gray-700 focus:border-blue-500" required>
+        </div>
+        <div>
+            <label for="name" class="text-white font-semibold">
+                Name
+            </label>
+            <input type="text" placeholder="e.g kelvin white" name="name"  class="w-full px-4 py-1.5 rounded-lg bg-gray-800 text-white outline-none border border-gray-700 focus:border-blue-500" required>
+        </div>
+        <div>
+            <label for="Email" class="text-white">
+                Email
+            </label>
+            <input type="text" placeholder="exampl@gmail.com" name="Email"  class="w-full px-4 py-1.5 rounded-lg bg-gray-800 text-white outline-none border border-gray-700 focus:border-blue-500" required>
+        </div>
+        <div>
+            <label for="phone" class="text-white font-semibold">
+                Phone
+            </label>
+            <input type="text" placeholder="09012345678" name="phone"  class="w-full px-4 py-1.5 rounded-lg bg-gray-800 text-white outline-none border border-gray-700 focus:border-blue-500" required>
+        </div>
+        <button type="button" class="w-full bg-purple-500 hover:bg-purple-700 text-white py-3 rounded-lg font-bold transition">Submit</button>
+    </div>
+</form>
+</body>
+</html>
