@@ -1,14 +1,19 @@
 <?php
 
-$host = `localhost`;
-$dbname = `sch_db`;
-$username = `root`;
-$password = ``;
+$host = "localhost";
+$dbname = "student_portal";
+$username = "root";
+$password = "";
 
-$pdo=newPDO(
-    "mysql;host=$host;dbname=$dbname";
-    $username;
-    $password;
-);
+try {
+
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch(PDOException $e) {
+
+    die("Connection failed: " . $e->getMessage());
+}
 
 ?>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Umark's Designs, Graphic Design, Web Development, Social Media Templates, Company Flyers, Branding, Logo Design, Online Presence, Creative Services, Nigeria"
+    />
+    <title>Umark's Design Official Website - Homepage</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/faff1bf098.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .button {
+        padding: 15px 20px;
+        margin: 0;
+        gap: 12px;
+        background-color: #064428;
+        border: none;
+        border-radius: 12px;
+      }
+
+      .a {
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+      }
+
+      .button:hover {
+        background-color: #08a35e;
+      }
+
+      .button:active {
+        background-color: #00ff8c;
+      }
+
+      #button {
+        padding: 15px 20px;
+        margin: 0;
+        gap: 12px;
+        background-color: #064428;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      #button:hover {
+        background-color: #08a35e;
+      }
+
+      #button:active {
+        background-color: #00ff8c;
+      }
+      .about {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease-out,
+          transform 0.6s ease-out;
+        visibility: hidden;
+        margin-left: 20px;
+      }
+      .about.visible {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .about {
+          transition: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <div class="bg-white shadow-md sticky top-0 z-30">
+      <div class="flex justify-between items-center px-6 py-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img
+            src="umark_logo_0.1-removebg-preview.png"
+            alt="Logo"
+            class="w-10"
+          />
+
+          <h2
+            class="font-semibold text-2xl font-[contrail] text-green-900 mt-2"
+          >
+            UMARK'S DESIGN
+          </h2>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-5 items-center font-semibold">
+          <li>
+            <a href="#" class="hover:text-green-800 transition"> Home </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-green-800 transition"> About </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-green-800 transition"> Contact </a>
+          </li>
+
+          <li class="flex gap-2">
+            <a href="login.php" id="button"> Login </a>
+
+            <a href="sign-up.php" class="button a"> Sign Up </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-2xl text-green-800 cursor-pointer"
+          aria-label="Toggle Menu"
+        >
+          <i class="fa-solid fa-ellipsis"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="menu"
+        class="md:hidden absolute top-20 right-4 w-56 bg-green-900 rounded-2xl shadow-2xl opacity-0 scale-95 -translate-y-5 pointer-events-none transition-all duration-500 ease-in-out overflow-hidden"
+      >
+        <ul class="flex flex-col gap-4 p-5 font-semibold text-white">
+          <li>
+            <a href="#">Home</a>
+          </li>
+
+          <li>
+            <a href="#">About</a>
+          </li>
+
+          <li>
+            <a href="#">Contact</a>
+          </li>
+
+          <li class="flex flex-col gap-3">
+            <a href="login.php" id="button"> Login </a>
+
+            <a href="sign-up.php" class="button a text-center"> Sign Up </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <div
+      class="bg-[url('sm.jpg')] bg-cover bg-center bg-no-repeat min-h-screen relative"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex flex-col justify-center min-h-screen px-6 lg:px-16"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold text-white max-w-4xl leading-tight"
+          id="title"
+        >
+          Welcome to Umark's Design Official Website
+        </h1>
+
+        <p
+          class="mt-6 text-gray-200 text-lg max-w-2xl leading-relaxed"
+          id="title"
+        >
+          I’d love the chance to bring your ideas to life and make things easier
+          for you. Whether it's a small project or something big, I’m here to
+          listen, support, and deliver with care. Let’s create something
+          wonderful together — your vision deserves the best.
+        </p>
+
+        <!-- Buttons -->
+        <div class="subtitile mt-8 flex gap-4 flex-wrap">
+          <a
+            href="login.php"
+            class="bg-green-900 hover:bg-green-700 transition px-6 py-3 rounded-xl text-white font-semibold shadow-xl"
+          >
+            Login
+          </a>
+
+          <a
+            href="sign-up.php"
+            class="border border-white hover:bg-white hover:text-green-900 transition duration-600 ease-in-out px-6 py-3 rounded-xl text-white font-semibold"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- About section-->
+    <div class="about grid lg:grid-cols-2 sm:grid-cols-1 gap-0 p-4">
+      <div
+        class="relative flex flex-col justify-center px-6 lg:px-13 mitems-center"
+      >
+        <h2
+          class="text-4xl md:text-6xl font-bold text-black max-w-4xl leading-tight"
+        >
+          About Us
+        </h2>
+        <p>
+          At Umark’s Designs, we believe creativity should be clear, focused,
+          and tailored to your brand. Our services bring together professional
+          graphic design, modern social media templates, and impactful company
+          flyers that keep your business looking sharp and consistent across
+          every platform. We also offer web development solutions designed to
+          give your brand a strong online presence. Whether you need
+          eye-catching visuals, engaging social media posts, or a professional
+          website, Umark’s Designs is here to help you stand out. Located in
+          Abia State, Nigeria, we combine local insight with global design
+          standards to deliver work that speaks to your audience and strengthens
+          your identity. With experience serving diverse industries, we pride
+          ourselves on a client-centered approach — listening closely,
+          collaborating openly, and tailoring solutions that fit your unique
+          goals. While rooted in Abia State, Nigeria, our vision reaches beyond
+          borders, offering designs that resonate worldwide.
+        </p>
+      </div>
+      <img
+        src="5 (1).jpg"
+        alt="..."
+        class="w-140 sm:w-120 rounded-lg ml-2 px-4 py-3 lg:mt-20 rounded-lg"
+        style="border-radius: 16px"
+      />
+    </div>
+
+    <div class="about grid lg:grid-cols-2 sm:grid-cols-1 gap-0 p-4">
+      <img
+        src="3 (1).jpg"
+        alt="..."
+        class="w-140 sm:w-120 rounded-lg ml-2 px-4 py-3 lg:mt-20 rounded-lg order-2"
+        style="border-radius: 16px"
+      />
+      <div
+        class="relative flex flex-col justify-center px-6 lg:px-13 items-center order-1 md:order-2"
+      >
+        <h2
+          class="text-4xl md:text-6xl font-bold text-black max-w-4xl leading-tight"
+        >
+          Our Services
+        </h2>
+        <p>
+          At umark designs we offer exclusive services. Our designs are more
+          than creations—they are timeless statements of sophistication, crafted
+          with precision and artistry. Each piece is tailored to reflect your
+          individuality, offering you a world of distinction that only true
+          luxury can provide.
+          <button
+            class="bg-green-400 px-2 py-2 font-semibold text-white rounded hover:bg-green-800 transition duration-300 active:bg-green-600 ease-in-out"
+            id="serRed"
+          >
+            Find Out
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <div class="about grid lg:grid-cols-2 sm:grid-cols-1 gap-0 p-4">
+      <img
+        src="6 (1).jpg"
+        alt="..."
+        class="w-140 sm:w-120 rounded-lg ml-2 px-4 py-3 lg:mt-20 rounded-lg order-2"
+        style="border-radius: 16px"
+      />
+      <div
+        class="relative flex flex-col justify-center px-6 lg:px-13 items-center order-1"
+      >
+        <h2
+          class="text-4xl md:text-6xl font-bold text-black max-w-4xl leading-tight text-start"
+        >
+          Our Portfolio
+        </h2>
+        <p>
+          Step into a curated collection of exclusive designs, each crafted with
+          elegance and precision. Every piece tells a story of artistry and
+          sophistication, reflecting the essence of true luxury. 📩 Explore our
+          portfolio today and discover creations made to inspire and impress.
+          <button
+            class="bg-green-400 px-2 py-2 font-semibold text-white rounded hover:bg-green-800 transition duration-300 active:bg-green-600 ease-in-out"
+            id="Por"
+          >
+            Find Out
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      /*mobile menu*/
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      const icon = btn.querySelector("i");
+      const serRed = document.getElementById("serRed");
+      const Por = document.getElementById("Por");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("opacity-0");
+        menu.classList.toggle("scale-95");
+        menu.classList.toggle("-translate-y-5");
+        menu.classList.toggle("pointer-events-none");
+
+        if (icon.classList.contains("fa-ellipsis")) {
+          icon.classList.remove("fa-ellipsis");
+          icon.classList.add("fa-xmark");
+        } else {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-ellipsis");
+        }
+      });
+
+      serRed.onclick = function () {
+        window.alert("You Need To Sign Up/Login To View Our Services");
+      };
+      Por.onclick = function () {
+        window.alert("You Need To Sign Up/Login To View Our Portfolio");
+      };
+      const observerOptions = {
+        threshold: 0.1, // Triggers when 10% of the element is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Stop observing once the animation is done
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Select all elements with the animation class
+      document.querySelectorAll(".about").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
